@@ -4,6 +4,9 @@
         //   Remove if you want ts-node to do typechecking.
         // "transpileOnly": true,
         "files": true,
+        "require": [
+            "tsconfig-paths/register"
+        ]
     },
     "compilerOptions": {
         "lib": [
@@ -15,6 +18,15 @@
         "esModuleInterop": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
-        "moduleResolution": "node16"
+        "moduleResolution": "node16",
+        "baseUrl": "./",
+        "paths": {
+            "@models/*": [
+                "src/models/*"
+            ],
+            "@routes/*": [
+                "src/routes/*"
+            ],
+        }
     }
 }
