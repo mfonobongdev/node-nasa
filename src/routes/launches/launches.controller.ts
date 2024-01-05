@@ -15,7 +15,7 @@ function httpAddNewLaunch(req: Request, res: Response) {
   } catch (error) {
     if (error instanceof z.ZodError) {
       return res.status(400).json({
-        error: error.issues.flatMap((el) => `${el.path} - ${el.message}`)
+        error: 'Missing required launch property'
       });
     } else {
       return res.status(400).json({ error: 'An unexpected error occurred' });

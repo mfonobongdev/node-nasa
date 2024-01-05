@@ -21,6 +21,9 @@
         "moduleResolution": "node16",
         "baseUrl": "./",
         "paths": {
+            "@src/*": [
+                "src/*"
+            ],
             "@models/*": [
                 "src/models/*"
             ],
